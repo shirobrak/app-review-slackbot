@@ -82,7 +82,7 @@ func convReviewToMessage(reviews []entities.Review) Message {
 	msg.Name = os.Getenv("SLACK_BOT_NAME")
 	msg.IconEmoji = os.Getenv("SLACK_BOT_ICON")
 	msg.Channel = os.Getenv("SLACK_TARGET_CHANNEL")
-	msg.Text = "<!channel> 新着レビューが届きました."
+	msg.Text = os.Getenv("SLACK_MSG_PREFIX_TEXT")
 	for _, review := range reviews {
 		attachment := Attachment{}
 		attachment.MrkdwnIn = append(attachment.MrkdwnIn, "text")

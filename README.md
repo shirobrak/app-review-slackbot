@@ -51,6 +51,16 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/XXXX
 SLACK_TARGET_CHANNEL=random
 ```
 
+##### Slack のメッセージの先頭テキスト
+```
+SLACK_MSG_PREFIX_TEXT=新着レビューが届きました.
+```
+メンションをつけて通知したい場合は, 以下のように設定記述する.  
+
+例）@channel で通知したい場合.  
+`SLACK_MSG_PREFIX_TEXT=<!channel> 新着レビューが届きました.`
+
+
 ##### iOSアプリのRSSフィードURL
 下記の`XXXX`の部分にはiOSアプリのアプリIDが入る.  
 ```
